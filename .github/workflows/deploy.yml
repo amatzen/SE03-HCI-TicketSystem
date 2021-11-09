@@ -17,7 +17,7 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
-    depends-on: build
+    needs: build
     name: Vue deploy
     steps:
     - uses: actions/download-artifact@v2

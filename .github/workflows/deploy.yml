@@ -1,13 +1,26 @@
 name: Deploy Vue
 on: [push]
 jobs:
-  deploy_vue:
+  build:
+    runs-on: ubuntu-latest
+    name: Vue build
+    steps:
+    - uses: actions/checkout@v2
+    - uses: DerYeger/yarn-setup-action@master
+      with:
+        node-version: 16
+    - run: yarn run build
+    - uses: actions/upload-artifact@v2
+      with:
+        name: files
+  
+  deploy:
     runs-on: ubuntu-latest
     name: Vue deploy
     steps:
-    - uses: actions/checkout@v2
-    - uses: xRealNeon/VuePagesAction@1.0.1
+    - uses: actions/download-artifact@v2
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        username: 'amatzen'
-        reponame: 'TicketSystem'
-        token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist

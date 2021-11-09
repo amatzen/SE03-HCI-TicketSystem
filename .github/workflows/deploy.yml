@@ -8,6 +8,6 @@ jobs:
     - uses: actions/checkout@v2
     - uses: xRealNeon/VuePagesAction@1.0.1
       with:
-	username: 'amatzen'
-	reponame: 'TicketSystem'
-	token: ${{ secrets.GITHUB_TOKEN }}
+        username: 'amatzen'
+        reponame: 'TicketSystem'
+        token: ${{ secrets.GITHUB_TOKEN }}

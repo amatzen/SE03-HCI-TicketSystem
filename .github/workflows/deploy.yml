@@ -1,0 +1,13 @@
+name: Deploy Vue
+on: [push]
+jobs:
+  deploy_vue:
+    runs-on: ubuntu-latest
+    name: Vue deploy
+    steps:
+    - uses: actions/checkout@v2
+    - uses: xRealNeon/VuePagesAction@1.0.1
+      with:
+	username: 'amatzen'
+	reponame: 'TicketSystem'
+	token: ${{ secrets.GITHUB_TOKEN }}

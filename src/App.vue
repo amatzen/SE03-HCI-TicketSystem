@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <h1>Hej</h1>
+  <router-view></router-view>
 </template>

@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <p>{{ name }}</p>
-    <p>{{ position }}</p>
+  <div class="flex">
+    <div>
+      <p class="font-semibold">{{ name }}</p>
+      <p class="text-gray-400 text-sm">{{ position }}</p>
+    </div>
   </div>
 </template>
 

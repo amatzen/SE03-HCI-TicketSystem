@@ -30,11 +30,11 @@ export default {
         },
         {
           title: 'Kundeadministration',
-          to: '/',
+          to: '/crm',
         },
         {
           title: 'Statistik',
-          to: '/',
+          to: '/stats',
         }
       ]
     }

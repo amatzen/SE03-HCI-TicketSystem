@@ -2,23 +2,27 @@
   <div>
     <div v-for="column in data" :key="column.title">
       {{ column.title }}
-      <div class="tickets">
-        <p v-for="ticket in column.tickets" :key="ticket.id">{{ ticket.id }}</p>
-        <p v-for="ticket in column.tickets" :key="ticket.id">
-          {{ ticket.title }}
-        </p>
-        <p v-for="ticket in column.tickets" :key="ticket.id">
-          {{ ticket.name }}
-        </p>
+      <div>
+        <div v-for="ticket in column.tickets" :key="ticket.id">
+          <p>{{ ticket.id }}</p>
+          <p>{{ ticket.title }}</p>
+          <p>{{ ticket.name }}</p>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <TicketModal />
+  <Observer>
+    <TicketModal v-if="ticketState.activeTicket !== null" />
+  </Observer>
 </template>
 
 <script>
 import TicketModal from "./TicketModal.vue";
+import {ticketStoreObservable} from "../../store/TicketStore";
+import { Observer } from "mobx-vue-lite";
+
 export default {
   name: "OverviewPage",
 
@@ -54,16 +58,16 @@ export default {
       ],
     };
   },
-  components: { TicketModal },
+  components: { TicketModal, Observer },
+
+  setup(props) {
+    const ticketState = ticketStoreObservable()
+
+    return {
+      ticketState
+    }
+  }
+
 };
 </script>
 
-<style scoped>
-.tickets {
-  width: 15em;
-  height: 1em;
-  border: 15px solid #0c9366;
-  padding: 5em;
-  margin: 1em;
-}
-</style>

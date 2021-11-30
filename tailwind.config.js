@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -23,13 +23,12 @@ module.exports = {
         },
         yellowish: {
           500: "#fac748",
-        }
-      }
+        },
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [
-  ],
-}
+  plugins: [],
+};

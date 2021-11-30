@@ -7,10 +7,6 @@
 
 <script>
 export default {
-  name: "NotFoundPage"
-}
+  name: "NotFoundPage",
+};
 </script>
-
-<style scoped>
-
-</style>

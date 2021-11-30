@@ -5,7 +5,9 @@
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
-            <router-link :to="item.to" :title="item.title">{{ item.title }}</router-link>
+            <router-link :to="item.to" :title="item.title">{{
+              item.title
+            }}</router-link>
           </li>
         </ul>
       </nav>
@@ -19,28 +21,24 @@
 import NBUserSnippet from "./NBUserSnippet.vue";
 export default {
   name: "Navbar",
-  components: {NBUserSnippet},
+  components: { NBUserSnippet },
   data() {
     return {
       navElements: [
         {
-          title: 'Oversigt',
-          to: '/',
+          title: "Oversigt",
+          to: "/",
         },
         {
-          title: 'Kundeadministration',
-          to: '/crm',
+          title: "Kundeadministration",
+          to: "/crm",
         },
         {
-          title: 'Statistik',
-          to: '/stats',
-        }
-      ]
-    }
-  }
-}
+          title: "Statistik",
+          to: "/stats",
+        },
+      ],
+    };
+  },
+};
 </script>
-
-<style scoped>
-
-</style>

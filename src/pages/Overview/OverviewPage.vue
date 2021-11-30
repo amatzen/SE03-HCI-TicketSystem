@@ -10,7 +10,6 @@
           <p>{{ ticket.title }}</p>
           <p>{{ ticket.name }}</p>
         </div>
-
       </div>
     </div>
   </div>
@@ -22,7 +21,7 @@
 
 <script>
 import TicketModal from "./TicketModal.vue";
-import {ticketStoreObservable} from "../../store/TicketStore";
+import { ticketStoreObservable } from "../../store/TicketStore";
 import { Observer } from "mobx-vue-lite";
 
 export default {
@@ -63,13 +62,11 @@ export default {
   components: { TicketModal, Observer },
 
   setup(props) {
-    const ticketStore = ticketStoreObservable()
+    const ticketStore = ticketStoreObservable();
 
     return {
-      ticketStore
-    }
-  }
-
+      ticketStore,
+    };
+  },
 };
 </script>
-

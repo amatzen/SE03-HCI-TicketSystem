@@ -1,16 +1,15 @@
-import {createGlobalObservable, useLocalObservable} from "mobx-vue-lite";
+import { createGlobalObservable, useLocalObservable } from "mobx-vue-lite";
 
 export const ticketStoreObservable = createGlobalObservable(() => {
-    return useLocalObservable(() => ({
-        activeTicket: null,
+  return useLocalObservable(() => ({
+    activeTicket: null,
 
-        setActiveTicket(ticket: any) {
-            this.activeTicket = ticket;
-        },
+    setActiveTicket(ticket: any) {
+      this.activeTicket = ticket;
+    },
 
-        clearActiveTicket() {
-            this.activeTicket = null;
-        },
-
-    }))
-})
+    clearActiveTicket() {
+      this.activeTicket = null;
+    },
+  }));
+});

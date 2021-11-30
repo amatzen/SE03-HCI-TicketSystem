@@ -4,7 +4,6 @@
       <span class="font-bold">Ticket<span class="text-green-500">o</span></span>
       <nav>
         <ul class="flex items-center h-full">
-          <!-- TODO: Set up router links instead of default a tags -->
           <li v-for="item of navElements" class="p-2 h-full inline-block">
             <router-link :to="item.to" :title="item.title">{{ item.title }}</router-link>
           </li>

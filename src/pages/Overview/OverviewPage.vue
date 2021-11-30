@@ -7,9 +7,12 @@
       </div>
     </div>
   </div>
+
+  <TicketModal />
 </template>
 
 <script>
+import TicketModal from "./TicketModal.vue";
 export default {
   name: "OverviewPage",
 
@@ -39,8 +42,8 @@ export default {
       ],
     }
   },
-};
-
+  components: {TicketModal}
+}
 </script>
 
 <style scoped></style>

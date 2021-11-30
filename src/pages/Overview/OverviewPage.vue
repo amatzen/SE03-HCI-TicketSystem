@@ -2,8 +2,14 @@
   <div>
     <div v-for="column in data" :key="column.title">
       {{ column.title }}
-      <div>
-        <p v-for="ticket in column.tickets" :key="ticket.id">{{ ticket.title}}</p>
+      <div class="tickets">
+        <p v-for="ticket in column.tickets" :key="ticket.id">{{ ticket.id }}</p>
+        <p v-for="ticket in column.tickets" :key="ticket.id">
+          {{ ticket.title }}
+        </p>
+        <p v-for="ticket in column.tickets" :key="ticket.id">
+          {{ ticket.name }}
+        </p>
       </div>
     </div>
   </div>
@@ -37,13 +43,27 @@ export default {
         {
           title: "Aktive sager",
           color: "red",
-          tickets: [],
+          tickets: [
+            {
+              id: 588,
+              title: "Det nye tider",
+              name: "Ashvikan Sivabalaa",
+            },
+          ],
         },
       ],
-    }
+    };
   },
-  components: {TicketModal}
-}
+  components: { TicketModal },
+};
 </script>
 
-<style scoped></style>
+<style scoped>
+.tickets {
+  width: 15em;
+  height: 1em;
+  border: 15px solid #0c9366;
+  padding: 5em;
+  margin: 1em;
+}
+</style>

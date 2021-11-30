@@ -1,11 +1,23 @@
 <template>
   <Modal>
-    <p>
-      <span>#{{ data.id }}</span>
-      <span :class="`text-${data.status.color}-500`">{{ data.status.title}}</span>
-      <span>Oprettet {{ relativeTimeFormat(data.created_at) }} siden</span>
-    </p>
-    <h1 class="text-2xl">{{ data.title }}</h1>
+    <div>
+      <div class="bg-gray-100 p-6">
+        <p>
+          <span class="mr-2 font-semibold text-gray-500">#{{ data.id }}</span>
+          <span class="mr-2 font-semibold text-gray-500" :class="`text-${data.status.color}-500`">{{ data.status.title}}</span>
+          <span class="mr-2 font-semibold text-gray-500">Oprettet {{ relativeTimeFormat(data.created_at) }} siden</span>
+        </p>
+        <h1 class="text-4xl mt-2 font-bold">{{ data.title }}</h1>
+      </div>
+      <div class="bg-white p-6 grid">
+        <div>
+          <div>
+            <span class="bg-tealish-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold">UH</span>
+            <p>Hej hej hej</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </Modal>
 </template>
 
@@ -36,7 +48,7 @@ export default {
       }
     });
 
-    const relativeTimeFormat = (date: Date) => formatDistanceToNow(date, {
+    const relativeTimeFormat = (date: Date ) => formatDistanceToNow(date, {
       locale: da
     })
 
@@ -49,5 +61,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

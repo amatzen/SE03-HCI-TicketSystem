@@ -1,10 +1,10 @@
 <template>
-  <div class="content">
-    <div class="group">
-      <h3>{{ data }}</h3>
-      <li v-for="cases in data" :key="data.title">
-        {{ data.title }}
-      </li>
+  <div>
+    <div v-for="column in data" :key="column.title">
+      {{ column.title }}
+      <div>
+        <p v-for="ticket in column.tickets" :key="ticket.id">{{ ticket.title}}</p>
+      </div>
     </div>
   </div>
 </template>

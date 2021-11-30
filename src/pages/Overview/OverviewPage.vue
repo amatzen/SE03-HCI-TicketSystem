@@ -6,7 +6,7 @@
       {{ column.title }}
       <div>
         <div v-for="ticket in column.tickets" :key="ticket.id">
-          <p>{{ ticket.id }}</p>
+          <p>#{{ ticket.id }}</p>
           <p>{{ ticket.title }}</p>
           <p>{{ ticket.name }}</p>
         </div>
@@ -32,27 +32,45 @@ export default {
       data: [
         {
           title: "Nye sager",
+          color: "#8390fa",
           tickets: [
             {
-              id: 524,
-              title: "Lobortis",
-              name: "Kristian Bech",
-            },
-            {
-              id: 552,
-              title: "Integer",
-              name: "Frederikke Hjort",
+              id: 1,
+              title: "Title 1",
+              name: "Name 1",
             },
           ],
         },
         {
           title: "Aktive sager",
-          color: "red",
+          color: "#e60f4f",
           tickets: [
             {
-              id: 588,
-              title: "Det nye tider",
-              name: "Ashvikan Sivabalaa",
+              id: 2,
+              title: "Title 2",
+              name: "Name 2",
+            },
+          ],
+        },
+        {
+          title: "Afventer kunderespons",
+          color: "#fac748",
+          tickets: [
+            {
+              id: 3,
+              title: "Title 3",
+              name: "Name 3",
+            },
+          ],
+        },
+        {
+          title: "Færdig",
+          color: "#24d2b3",
+          tickets: [
+            {
+              id: 4,
+              title: "Title 3",
+              name: "Name 4",
             },
           ],
         },

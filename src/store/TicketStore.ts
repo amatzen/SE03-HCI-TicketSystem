@@ -6,8 +6,11 @@ export const ticketStoreObservable = createGlobalObservable(() => {
 
         setActiveTicket(ticket: any) {
             this.activeTicket = ticket;
-        }
+        },
 
+        clearActiveTicket() {
+            this.activeTicket = null;
+        },
 
     }))
 })

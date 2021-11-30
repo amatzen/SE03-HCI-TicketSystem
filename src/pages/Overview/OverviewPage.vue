@@ -1,5 +1,7 @@
 <template>
   <div>
+    <button @click="ticketStore.setActiveTicket([])">Åbn modal</button>
+
     <div v-for="column in data" :key="column.title">
       {{ column.title }}
       <div>
@@ -14,7 +16,7 @@
   </div>
 
   <Observer>
-    <TicketModal v-if="ticketState.activeTicket !== null" />
+    <TicketModal @dismiss="" v-if="ticketStore.activeTicket !== null" />
   </Observer>
 </template>
 
@@ -61,10 +63,10 @@ export default {
   components: { TicketModal, Observer },
 
   setup(props) {
-    const ticketState = ticketStoreObservable()
+    const ticketStore = ticketStoreObservable()
 
     return {
-      ticketState
+      ticketStore
     }
   }
 

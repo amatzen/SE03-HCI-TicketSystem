@@ -1,5 +1,5 @@
 <template>
-  <Modal>
+  <Modal @dismiss="ticketStore.clearActiveTicket()">
     <div>
       <div class="bg-gray-100 p-6">
         <p>
@@ -27,6 +27,7 @@ import {ref} from "vue";
 import {formatDistanceToNow} from "date-fns";
 import { da } from 'date-fns/locale';
 import {Ticket} from "../../utils/Ticket";
+import {ticketStoreObservable} from "../../store/TicketStore";
 export default {
   name: "TicketModal",
   components: {Modal},
@@ -52,9 +53,12 @@ export default {
       locale: da
     })
 
+    const ticketStore = ticketStoreObservable()
+
     return {
       data,
-      relativeTimeFormat
+      relativeTimeFormat,
+      ticketStore
     }
   }
 }

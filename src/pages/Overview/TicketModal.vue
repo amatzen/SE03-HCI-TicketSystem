@@ -4,7 +4,7 @@
       <div class="bg-gray-100 p-6">
         <p>
           <span class="mr-2 font-semibold text-gray-500">#{{ data.id }}</span>
-          <span class="mr-2 font-semibold text-gray-500" :class="`text-${data.status.color}-500`">{{ data.status.title}}</span>
+          <span class="mr-2 font-semibold" :class="`text-${data.status.color}-500`">{{ data.status.title}}</span>
           <span class="mr-2 font-semibold text-gray-500">Oprettet {{ relativeTimeFormat(data.created_at) }} siden</span>
         </p>
         <h1 class="text-4xl mt-2 font-bold">{{ data.title }}</h1>

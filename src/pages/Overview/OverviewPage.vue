@@ -1,10 +1,14 @@
 <template>
   <h1>test</h1>
+
+  <TicketModal />
 </template>
 
 <script>
+import TicketModal from "./TicketModal.vue";
 export default {
-  name: "OverviewPage"
+  name: "OverviewPage",
+  components: {TicketModal}
 }
 </script>
 

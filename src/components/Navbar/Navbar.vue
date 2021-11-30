@@ -1,7 +1,9 @@
 <template>
   <header class="py-4 mb-5 bg-white shadow-md">
     <div class="container mx-auto flex justify-between items-center">
-      <span class="font-bold">Ticket<span class="text-tealish-500">o</span></span>
+      <span class="font-bold"
+        >Ticket<span class="text-tealish-500">o</span>
+      </span>
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
@@ -11,7 +13,6 @@
           </li>
         </ul>
       </nav>
-
       <NBUserSnippet name="Dorte" position="Kunderådgiver" />
     </div>
   </header>

@@ -15,35 +15,32 @@ export default {
 
   data() {
     return {
-      data,
-    };
+      data: [
+        {
+          title: "Nye sager",
+          tickets: [
+            {
+              id: 524,
+              title: "Lobortis",
+              name: "Kristian Bech",
+            },
+            {
+              id: 552,
+              title: "Integer",
+              name: "Frederikke Hjort",
+            },
+          ],
+        },
+        {
+          title: "Aktive sager",
+          color: "red",
+          tickets: [],
+        },
+      ],
+    }
   },
 };
 
-const data = {
-  data: [
-    {
-      title: "Nye sager",
-      tickets: [
-        {
-          id: 524,
-          title: "Lobortis",
-          name: "Kristian Bech",
-        },
-        {
-          id: 552,
-          title: "Integer",
-          name: "Frederikke Hjort",
-        },
-      ],
-    },
-    {
-      title: "Aktive sager",
-      color: "red",
-      tickets: [],
-    },
-  ],
-};
 </script>
 
 <style scoped></style>

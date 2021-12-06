@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "date-fns": "^2.26.0",
+    "faker": "^5.5.3",
     "mobx-vue-lite": "^0.2.7",
     "vue": "^3.2.16",
     "vue-router": "4"

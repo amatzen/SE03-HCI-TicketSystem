@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 font-semibold p-4 pt-12 rounded relative">
+  <div class="bg-gray-100 font-semibold p-4 pt-6 rounded relative">
     <span
         class="
         bg-tealish-800
@@ -12,6 +12,7 @@
         justify-center
         font-semibold
         absolute
+        select-none
         top--5
         left--5
       ">

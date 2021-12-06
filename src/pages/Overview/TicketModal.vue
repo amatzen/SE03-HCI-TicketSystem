@@ -52,25 +52,6 @@ export default {
   name: "TicketModal",
   components: { Modal },
   setup(props: any) {
-    /*
-    const data = ref<Ticket>({
-      id: 123,
-      status: {
-        title: "Aktiv",
-        color: "tealish",
-      },
-      title: "Kan ikke logge ind",
-      created_at: new Date(),
-      updated_at: new Date(),
-      customer: {
-        id: 1,
-        name: "Ulla Henningsen",
-        email: "hej@hej.dk",
-        created_at: new Date(),
-      },
-    });
-     */
-
     const ticketStore = ticketStoreObservable();
     const data = ticketStore.value.activeTicket;
 

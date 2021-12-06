@@ -17,6 +17,8 @@ body,
   margin: 0;
   padding: 0;
 
+  background: #f8f8f8;
+
   overflow-x: hidden;
 }
 

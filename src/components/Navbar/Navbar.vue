@@ -1,5 +1,5 @@
 <template>
-  <header class="py-4 mb-5 bg-white shadow-md">
+  <header class="py-4 mb-10 bg-white shadow-sm">
     <div class="container mx-auto flex justify-between items-center">
       <span class="font-bold"
         >Ticket<span class="text-tealish-500">o</span>
@@ -7,7 +7,7 @@
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
-            <router-link :to="item.to" :title="item.title">{{
+            <router-link :to="item.to" :title="item.title" class="font-semibold text-gray-500" exact-active-class="text-indigo-800">{{
               item.title
             }}</router-link>
           </li>

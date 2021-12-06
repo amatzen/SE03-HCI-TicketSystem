@@ -1,7 +1,7 @@
 <template>
   <Modal @dismiss="ticketStore.clearActiveTicket()" v-if="data">
-    <div class="w-full">
-      <div class="p-6">
+    <div class="min-w-910px">
+      <div class="p-12">
         <p>
           <span class="mr-2 font-semibold text-gray-500">#{{ data.id }}</span>
           <span
@@ -13,26 +13,8 @@
         </p>
         <h1 class="text-4xl mt-2 font-bold" :title="data.title">{{ dotLongStrings(36, data.title) }}</h1>
       </div>
-      <div class="bg-white p-6 grid">
-        <div>
-          <div>
-            <span
-              class="
-                bg-tealish-500
-                text-white
-                rounded-full
-                w-10
-                h-10
-                flex
-                items-center
-                justify-center
-                font-semibold
-              ">
-              UH
-            </span>
-            <p>Hej hej hej</p>
-          </div>
-        </div>
+      <div class="bg-white p-12 pt-0">
+        <TicketMessage :sender="data.customer" message="Test" />
       </div>
     </div>
   </Modal>
@@ -47,12 +29,13 @@ import { da } from 'date-fns/locale';
 import {Ticket} from "../../utils/Ticket";
 //@ts-ignore
 import {ticketStoreObservable} from "../../store/TicketStore";
+import TicketMessage from "./TicketMessage.vue";
 export default {
   name: "TicketModal",
   props: {
     ticket: Object
   },
-  components: { Modal },
+  components: {TicketMessage, Modal },
   setup(props: any) {
     const ticketStore = ticketStoreObservable();
     //const data: Ticket|null = ticketStore.value.activeTicket;
@@ -73,3 +56,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.min-w-910px {
+  min-width: 910px;
+}
+</style>

@@ -50,10 +50,14 @@ import {Ticket} from "../../utils/Ticket";
 import {ticketStoreObservable} from "../../store/TicketStore";
 export default {
   name: "TicketModal",
+  props: {
+    ticket: Object
+  },
   components: { Modal },
   setup(props: any) {
     const ticketStore = ticketStoreObservable();
-    const data: Ticket|null = ticketStore.value.activeTicket;
+    //const data: Ticket|null = ticketStore.value.activeTicket;
+    const data: Ticket = props.ticket;
 
     const relativeTimeFormat = (date: Date) =>
       formatDistanceToNow(date, {

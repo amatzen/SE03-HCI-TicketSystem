@@ -13,7 +13,7 @@
   </div>
 
   <Observer>
-    <TicketModal @dismiss="" v-if="ticketStore.activeTicket !== null" />
+    <TicketModal v-if="ticketStore.activeTicket !== null" :ticket="ticketStore.activeTicket" />
   </Observer>
 </template>
 

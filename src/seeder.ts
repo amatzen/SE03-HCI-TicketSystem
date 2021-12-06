@@ -15,7 +15,7 @@ const createTicket = (status: TicketStatusColumn): Ticket => {
     const customerName = faker.name.findName();
 
     const template: Ticket = {
-        created_at: faker.date.past(),
+        created_at: faker.date.recent(14),
         customer: {
             name: customerName,
             created_at: faker.date.past(),

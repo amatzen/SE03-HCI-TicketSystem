@@ -1,6 +1,6 @@
 <template>
   <div role="cell"
-       :class="`w-full bg-${ticket.status.color}-500 text-white p-5 rounded mb-3 cursor-pointer transform scale-100 hover:scale-105 transition-transform`"
+       :class="`w-full bg-${ticket.status.color}-500 text-white p-5 rounded mb-3 cursor-pointer transform scale-100 hover:scale-105 transition-transform select-none`"
        @click="ticketStore.setActiveTicket(ticket)"
   >
     <p class="text-sm">#{{ ticket.id}}</p>

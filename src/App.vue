@@ -2,11 +2,6 @@
 
 <template>
   <router-view></router-view>
-
-  <div class="bg-crimson-500"></div>
-  <div class="bg-indigo-500"></div>
-  <div class="bg-yellowish-500"></div>
-  <div class="bg-tealish-500"></div>
 </template>
 
 <style>

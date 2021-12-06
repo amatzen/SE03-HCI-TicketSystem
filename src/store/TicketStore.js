@@ -4,13 +4,15 @@ export const ticketStoreObservable = createGlobalObservable(() => {
     return useLocalObservable(() => ({
         activeTicket: null,
 
-        setActiveTicket(ticket: any) {
+        setActiveTicket(ticket) {
             this.activeTicket = ticket;
         },
 
         clearActiveTicket() {
             this.activeTicket = null;
         },
+
+        ticketsList: [],
 
     }))
 })

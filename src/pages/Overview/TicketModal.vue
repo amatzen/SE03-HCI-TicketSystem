@@ -1,5 +1,5 @@
 <template>
-  <Modal @dismiss="ticketStore.clearActiveTicket()">
+  <Modal @dismiss="ticketStore.clearActiveTicket()" v-if="data">
     <div class="w-full">
       <div class="bg-gray-100 p-6">
         <p>
@@ -53,7 +53,7 @@ export default {
   components: { Modal },
   setup(props: any) {
     const ticketStore = ticketStoreObservable();
-    const data = ticketStore.value.activeTicket;
+    const data: Ticket = ticketStore.value.activeTicket;
 
     const relativeTimeFormat = (date: Date) =>
       formatDistanceToNow(date, {

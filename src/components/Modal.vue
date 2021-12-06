@@ -1,6 +1,5 @@
 <template>
   <div
-    role="dialog"
     class="
       min-w-screen
       h-screen
@@ -31,6 +30,7 @@
         overflow-hidden
         shadow-md
       "
+      role="dialog"
     >
       <slot />
     </div>

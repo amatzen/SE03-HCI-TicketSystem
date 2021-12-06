@@ -1,7 +1,7 @@
 <template>
   <header class="py-4 mb-10 bg-white shadow-sm">
     <div class="container mx-auto flex justify-between items-center">
-      <span class="font-bold"
+      <span class="font-bold text-lg tracking-tight select-none"
         >Ticket<span class="text-tealish-500">o</span>
       </span>
       <nav>

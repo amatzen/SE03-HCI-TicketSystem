@@ -4,13 +4,14 @@
        @click="ticketStore.setActiveTicket(ticket)"
   >
     <p class="text-sm">#{{ ticket.id}}</p>
-    <h3 class="font-bold text-lg my-2">{{ ticket.title }}</h3>
+    <h3 class="font-bold text-lg my-2">{{ dotLongStrings(32,ticket.title) }}</h3>
     <p class="text-base font-semibold">{{ ticket.customer.name }}</p>
   </div>
 </template>
 
 <script>
 import { ticketStoreObservable } from "../../store/TicketStore";
+import { dotLongStrings } from "../../utils/UtilitiesPack";
 
 export default {
   name: "TicketListItem",
@@ -20,7 +21,7 @@ export default {
   setup(props) {
     const ticketStore = ticketStoreObservable()
 
-    return { ticketStore }
+    return { ticketStore, dotLongStrings }
   }
 }
 </script>

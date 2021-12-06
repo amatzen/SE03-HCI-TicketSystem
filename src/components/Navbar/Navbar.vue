@@ -7,9 +7,19 @@
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
-            <router-link :to="item.to" :title="item.title" class="font-semibold focus:text-indigo-500 hover:underline underline-offset-medium ; " exact-active-class="text-indigo-800">{{
-              item.title
-            }}</router-link>
+            <router-link
+              :to="item.to"
+              :title="item.title"
+              class="
+                font-semibold
+                focus:text-indigo-500
+                hover:underline
+                underline-offset-medium
+                ;
+              "
+              exact-active-class="text-indigo-800"
+              >{{ item.title }}</router-link
+            >
           </li>
         </ul>
       </nav>

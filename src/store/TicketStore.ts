@@ -2,38 +2,36 @@
 import { createGlobalObservable, useLocalObservable } from "mobx-vue-lite";
 
 export const ticketStoreObservable = createGlobalObservable(() => {
-    return useLocalObservable(() => ({
-        activeTicket: null,
+  return useLocalObservable(() => ({
+    activeTicket: null,
 
-        setActiveTicket(ticket) {
-            this.activeTicket = ticket;
-        },
+    setActiveTicket(ticket) {
+      this.activeTicket = ticket;
+    },
 
-        clearActiveTicket() {
-            this.activeTicket = null;
-        },
+    clearActiveTicket() {
+      this.activeTicket = null;
+    },
 
-        ticketColumns: [],
+    ticketColumns: [],
 
-        addTicketColumn(column) {
-            this.ticketColumns = [...this.ticketColumns, column];
-        },
+    addTicketColumn(column) {
+      this.ticketColumns = [...this.ticketColumns, column];
+    },
 
-        ticketsList: [],
+    ticketsList: [],
 
-        addTicket(ticket) {
-            this.ticketsList = [...this.ticketsList, ticket];
-            return ticket.id;
-        },
+    addTicket(ticket) {
+      this.ticketsList = [...this.ticketsList, ticket];
+      return ticket.id;
+    },
 
-        updateTicket(id, ticket) {
-            const index = this.ticketsList.findIndex(x => x.id === id);
+    updateTicket(id, ticket) {
+      const index = this.ticketsList.findIndex((x) => x.id === id);
+    },
 
-        },
-
-        removeTicket(id) {
-            this.ticketsList = this.ticketsList.filter(x => x.id !== id);
-        },
-
-    }))
-})
+    removeTicket(id) {
+      this.ticketsList = this.ticketsList.filter((x) => x.id !== id);
+    },
+  }));
+});

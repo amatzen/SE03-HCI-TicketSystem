@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-100 font-semibold p-4 pt-6 rounded relative">
     <span
-        class="
+      class="
         bg-tealish-800
         text-white
         rounded-full
@@ -15,10 +15,11 @@
         select-none
         top--5
         left--5
-      ">
+      "
+    >
       {{ initials(sender.name) }}
     </span>
-    <p>{{  message }}</p>
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -27,16 +28,18 @@ export default {
   name: "TicketMessage",
   props: {
     message: String,
-    sender: Object
+    sender: Object,
   },
   setup(props) {
-    const initials = (name) => name.slice(0,1) + name.split(' ')[name.split(' ').length-1].slice(0,1)
+    const initials = (name) =>
+      name.slice(0, 1) +
+      name.split(" ")[name.split(" ").length - 1].slice(0, 1);
 
     return {
-      initials
-    }
-  }
-}
+      initials,
+    };
+  },
+};
 </script>
 
 <style scoped>

@@ -2,7 +2,6 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    
     extend: {
       colors: {
         indigo: {
@@ -52,12 +51,11 @@ module.exports = {
       },
     },
     underlineOffset: {
-      'medium': '30px',
-    }
+      medium: "30px",
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [  require('tailwind-underline-utils')
-],
+  plugins: [require("tailwind-underline-utils")],
 };

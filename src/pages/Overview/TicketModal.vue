@@ -53,7 +53,7 @@ export default {
   components: { Modal },
   setup(props: any) {
     const ticketStore = ticketStoreObservable();
-    const data: Ticket = ticketStore.value.activeTicket;
+    const data: Ticket|null = ticketStore.value.activeTicket;
 
     const relativeTimeFormat = (date: Date) =>
       formatDistanceToNow(date, {

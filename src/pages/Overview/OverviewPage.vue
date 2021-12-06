@@ -1,7 +1,5 @@
 <template>
   <div>
-    <button @click="ticketStore.setActiveTicket([])">Åbn modal</button>
-
     <section class="w-full grid grid-cols-4 gap-12">
       <div role="row" v-for="column in ticketStore.ticketColumns" :key="column.title">
         <h2 class="text-xl font-bold">{{ column.title }}</h2>

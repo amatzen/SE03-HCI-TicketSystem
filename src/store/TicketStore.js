@@ -1,4 +1,4 @@
-import {createGlobalObservable, useLocalObservable} from "mobx-vue-lite";
+import { createGlobalObservable, useLocalObservable } from "mobx-vue-lite";
 
 export const ticketStoreObservable = createGlobalObservable(() => {
     return useLocalObservable(() => ({

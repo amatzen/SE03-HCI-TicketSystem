@@ -4,15 +4,34 @@
       <div class="bg-gray-100 p-6">
         <p>
           <span class="mr-2 font-semibold text-gray-500">#{{ data.id }}</span>
-          <span class="mr-2 font-semibold" :class="`text-${data.status.color}-500`">{{ data.status.title}}</span>
-          <span class="mr-2 font-semibold text-gray-500">Oprettet {{ relativeTimeFormat(data.created_at) }} siden</span>
+          <span
+            class="mr-2 font-semibold"
+            :class="`text-${data.status.color}-500`"
+            >{{ data.status.title }}</span
+          >
+          <span class="mr-2 font-semibold text-gray-500"
+            >Oprettet {{ relativeTimeFormat(data.created_at) }} siden</span
+          >
         </p>
         <h1 class="text-4xl mt-2 font-bold">{{ data.title }}</h1>
       </div>
       <div class="bg-white p-6 grid">
         <div>
           <div>
-            <span class="bg-tealish-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold">UH</span>
+            <span
+              class="
+                bg-tealish-500
+                text-white
+                rounded-full
+                w-10
+                h-10
+                flex
+                items-center
+                justify-center
+                font-semibold
+              "
+              >UH</span
+            >
             <p>Hej hej hej</p>
           </div>
         </div>
@@ -31,39 +50,37 @@ import {Ticket} from "../../utils/Ticket";
 import {ticketStoreObservable} from "../../store/TicketStore";
 export default {
   name: "TicketModal",
-  components: {Modal},
+  components: { Modal },
   setup(props: any) {
     const data = ref<Ticket>({
       id: 123,
       status: {
         title: "Aktiv",
-        color: "tealish"
+        color: "tealish",
       },
       title: "Kan ikke logge ind",
       created_at: new Date(),
       updated_at: new Date(),
       customer: {
         id: 1,
-        name: 'Ulla Henningsen',
-        email: 'hej@hej.dk',
-        created_at: new Date()
-      }
+        name: "Ulla Henningsen",
+        email: "hej@hej.dk",
+        created_at: new Date(),
+      },
     });
 
-    const relativeTimeFormat = (date: Date ) => formatDistanceToNow(date, {
-      locale: da
-    })
+    const relativeTimeFormat = (date: Date) =>
+      formatDistanceToNow(date, {
+        locale: da,
+      });
 
-    const ticketStore = ticketStoreObservable()
+    const ticketStore = ticketStoreObservable();
 
     return {
       data,
       relativeTimeFormat,
-      ticketStore
-    }
-  }
-}
+      ticketStore,
+    };
+  },
+};
 </script>
-
-<style scoped>
-</style>

@@ -52,6 +52,7 @@ export default {
   name: "TicketModal",
   components: { Modal },
   setup(props: any) {
+    /*
     const data = ref<Ticket>({
       id: 123,
       status: {
@@ -68,13 +69,16 @@ export default {
         created_at: new Date(),
       },
     });
+     */
+
+    const ticketStore = ticketStoreObservable();
+    const data = ticketStore.value.activeTicket;
 
     const relativeTimeFormat = (date: Date) =>
       formatDistanceToNow(date, {
         locale: da,
       });
 
-    const ticketStore = ticketStoreObservable();
 
     return {
       data,

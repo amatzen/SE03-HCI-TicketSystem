@@ -1,9 +1,11 @@
 <template>
   <header class="py-4 mb-10 bg-white shadow-sm">
     <div class="container mx-auto flex justify-between items-center">
-      <span class="font-bold text-lg tracking-tight select-none"
-        >Ticket<span class="text-tealish-500">o</span>
-      </span>
+      <router-link to="/">
+        <span class="font-bold text-lg tracking-tight select-none"
+          >Ticket<span class="text-tealish-500">o</span>
+        </span>
+      </router-link>
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">

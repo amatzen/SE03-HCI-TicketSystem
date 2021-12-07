@@ -3,7 +3,7 @@
     <h1 class="h1">404</h1>
     <p class="p">Vi kunne ikke finde den efterspurgte side</p>
     <div class="a">
-      <a href="/">Gå tilbage</a>
+      <a href="/">Gå til forsiden</a>
     </div>
   </div>
 </template>

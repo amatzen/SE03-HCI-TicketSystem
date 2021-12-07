@@ -6,7 +6,7 @@
         v-for="column in ticketStore.ticketColumns"
         :key="column.title"
       >
-        <h2 class="text-xl font-bold">{{ column.title }}</h2>
+        <h2 class="text-xl font-bold"><span class="inline-block w-3 h-3 bg-gray-700 rounded-full" :class="`bg-${column.color}-500`"></span> {{ column.title }}</h2>
         <p class="text-gray-600 font-semibold mb-5">
           {{ getTicketsByColumn(column).length }} sager
         </p>

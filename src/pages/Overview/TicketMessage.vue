@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 font-semibold p-4 pt-6 rounded relative">
+  <div class="bg-gray-100 font-semibold p-4 pt-6 rounded relative mb-10">
     <span
       class="
         bg-tealish-800

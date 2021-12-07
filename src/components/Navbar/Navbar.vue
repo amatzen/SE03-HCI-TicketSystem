@@ -9,6 +9,7 @@
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
+           <Icons  :name="item.icon"/>
             <router-link
               :to="item.to"
               :title="item.title"
@@ -20,7 +21,7 @@
                 ;
               "
               exact-active-class="text-indigo-800"
-              >{{ item.title }}</router-link
+              >{{ item.title }} </router-link
             >
           </li>
         </ul>
@@ -32,23 +33,27 @@
 
 <script>
 import NBUserSnippet from "./NBUserSnippet.vue";
+import Icons from './Icons.vue';
 export default {
   name: "Navbar",
-  components: { NBUserSnippet },
+  components: { NBUserSnippet, Icons },
   data() {
     return {
       navElements: [
         {
           title: "Oversigt",
           to: "/",
+          icon:"UserGroup",
         },
         {
           title: "Kundeadministration",
           to: "/crm",
+          icon:"UserGroup",
         },
         {
           title: "Statistik",
           to: "/stats",
+          icon:"UserGroup",
         },
       ],
     };

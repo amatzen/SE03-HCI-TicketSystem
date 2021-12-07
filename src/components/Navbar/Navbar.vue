@@ -9,7 +9,9 @@
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
-           <Icons  :name="item.icon"/>
+          <div class="fill-current text-indigo-500">              
+            <Icons    :name="item.icon" />
+           </div>
             <router-link
               :to="item.to"
               :title="item.title"

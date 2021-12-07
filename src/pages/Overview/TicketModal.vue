@@ -42,7 +42,8 @@
 
           <div class="mt-5">
             <p class="font-semibold text-sm text-gray-600">Handlinger</p>
-
+            <Button variant="crimson" block>Luk sag</Button>
+            <Button variant="yellowish" block>Flyt til liste</Button>
           </div>
 
         </div>
@@ -63,12 +64,13 @@ import { ticketStoreObservable } from "../../store/TicketStore";
 import TicketMessage from "./TicketMessage.vue";
 import TimelineItem from "./TimelineItem.vue";
 import faker from 'faker';
+import Button from "../../components/Button.vue";
 export default {
   name: "TicketModal",
   props: {
     ticket: Object,
   },
-  components: {TimelineItem, TicketMessage, Modal },
+  components: {Button, TimelineItem, TicketMessage, Modal },
   setup(props: any) {
     const ticketStore = ticketStoreObservable();
     //const data: Ticket|null = ticketStore.value.activeTicket;

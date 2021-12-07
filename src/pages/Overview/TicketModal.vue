@@ -31,7 +31,7 @@
           <div>
             <p class="font-semibold text-sm text-gray-600">Kunde</p>
             <h3 class="font-bold text-xl">{{ data.customer.name }}</h3>
-            <p class="font-semibold text-indigo-700">{{ lowercaseString(data.customer.email) }}</p>
+            <a :href="`mailto:${lowercaseString(data.customer.email)}`" :title="`Send email til ${data.customer.name}`" class="font-semibold text-indigo-700">{{ lowercaseString(data.customer.email) }}</a>
             <p class="text-gray-600">Kunde siden {{ dateFormat(data.customer.created_at) }}</p>
           </div>
 

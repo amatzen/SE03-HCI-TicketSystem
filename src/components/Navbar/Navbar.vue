@@ -43,7 +43,7 @@ export default {
         {
           title: "Oversigt",
           to: "/",
-          icon:"UserGroup",
+          icon:"View",
         },
         {
           title: "Kundeadministration",
@@ -53,7 +53,7 @@ export default {
         {
           title: "Statistik",
           to: "/stats",
-          icon:"UserGroup",
+          icon:"Chart",
         },
       ],
     };

@@ -1,9 +1,11 @@
 <template>
   <div class="text-center">
     <h1 class="text-6xl font-bold text-crimson-500 mb-2">404</h1>
-    <p class="text-2xl font-semibold text-gray-800 mb-5">Vi kunne ikke finde den efterspurgte side</p>
+    <p class="text-2xl font-semibold text-gray-800 mb-5">
+      Vi kunne ikke finde den efterspurgte side
+    </p>
 
-    <Button variant="crimson" @click="goBack()">Tilbage til forsiden</Button>
+    <Button variant="crimson" @click="goBack()">Gå tilbage</Button>
   </div>
 </template>
 
@@ -11,11 +13,11 @@
 import Button from "../components/Button.vue";
 export default {
   name: "NotFoundPage",
-  components: {Button},
+  components: { Button },
   methods: {
     goBack() {
       this.$router.push("/");
-    }
-  }
+    },
+  },
 };
 </script>

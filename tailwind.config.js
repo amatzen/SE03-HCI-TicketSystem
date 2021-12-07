@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'ticketmodal': 'auto 30%'
+        ticketmodal: "auto 30%",
       },
       colors: {
         indigo: {

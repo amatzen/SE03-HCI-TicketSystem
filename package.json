@@ -12,6 +12,7 @@
     "mobx-vue-lite": "^0.2.7",
     "tailwind-underline-utils": "^1.1.3",
     "vue": "^3.2.16",
+    "vue-material-design-icons": "^5.0.0",
     "vue-router": "4"
   },
   "devDependencies": {

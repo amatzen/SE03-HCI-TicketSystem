@@ -9,22 +9,22 @@
       <nav>
         <ul class="flex items-center h-full">
           <li v-for="item of navElements" class="p-2 h-full inline-block">
-          <div class="fill-current text-indigo-500">              
-            <Icons    :name="item.icon" />
-           </div>
+            <div class="fill-current text-tealish-500 flex justify-center">
+              <Icons :name="item.icon" />
+            </div>
             <router-link
               :to="item.to"
               :title="item.title"
               class="
                 font-semibold
-                focus:text-indigo-500
+                focus:text-tealish-500
                 hover:underline
                 underline-offset-medium
                 ;
               "
-              exact-active-class="text-indigo-800"
-              >{{ item.title }} </router-link
-            >
+              exact-active-class="text-tealish-500"
+              >{{ item.title }}
+            </router-link>
           </li>
         </ul>
       </nav>
@@ -35,7 +35,7 @@
 
 <script>
 import NBUserSnippet from "./NBUserSnippet.vue";
-import Icons from './Icons.vue';
+import Icons from "./Icons.vue";
 export default {
   name: "Navbar",
   components: { NBUserSnippet, Icons },
@@ -45,17 +45,17 @@ export default {
         {
           title: "Oversigt",
           to: "/",
-          icon:"View",
+          icon: "View",
         },
         {
           title: "Kundeadministration",
           to: "/crm",
-          icon:"UserGroup",
+          icon: "UserGroup",
         },
         {
           title: "Statistik",
           to: "/stats",
-          icon:"Chart",
+          icon: "Chart",
         },
       ],
     };

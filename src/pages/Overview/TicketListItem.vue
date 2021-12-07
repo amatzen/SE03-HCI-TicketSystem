@@ -1,7 +1,21 @@
 <template>
   <div
     role="cell"
-    class="w-full bg-gray-800 text-white p-5 rounded mb-3 cursor-pointer transform scale-100 hover:scale-105 transition-transform select-none border-t-4 border-gray-600"
+    class="
+      w-full
+      bg-gray-800
+      text-white
+      p-5
+      rounded
+      mb-3
+      cursor-pointer
+      transform
+      scale-100
+      hover:scale-105
+      transition-transform
+      select-none
+      border-t-4 border-gray-600
+    "
     :class="`border-${ticket.status.color}-500`"
     @click="ticketStore.setActiveTicket(ticket)"
   >

@@ -24,20 +24,30 @@
           <TicketMessage :sender="data.customer" message="Test" />
           <TicketMessage :sender="data.customer" message="Test" />
           <TicketMessage :sender="data.customer" message="Test" />
-
         </div>
         <div>
-
           <div>
             <p class="font-semibold text-sm text-gray-600">Kunde</p>
             <h3 class="font-bold text-xl">{{ data.customer.name }}</h3>
-            <a :href="`mailto:${lowercaseString(data.customer.email)}`" :title="`Send email til ${data.customer.name}`" class="font-semibold text-indigo-700">{{ lowercaseString(data.customer.email) }}</a>
-            <p class="text-gray-600">Kunde siden {{ dateFormat(data.customer.created_at) }}</p>
+            <a
+              :href="`mailto:${lowercaseString(data.customer.email)}`"
+              :title="`Send email til ${data.customer.name}`"
+              class="font-semibold text-indigo-700"
+              >{{ lowercaseString(data.customer.email) }}</a
+            >
+            <p class="text-gray-600">
+              Kunde siden {{ dateFormat(data.customer.created_at) }}
+            </p>
           </div>
 
           <div class="mt-5">
             <p class="font-semibold text-sm text-gray-600">Tidslinje</p>
-            <TimelineItem v-for="n in random(6)" :key="n" :text="randomString()" :color="timelineColor()" />
+            <TimelineItem
+              v-for="n in random(6)"
+              :key="n"
+              :text="randomString()"
+              :color="timelineColor()"
+            />
           </div>
 
           <div class="mt-5">
@@ -45,7 +55,6 @@
             <Button variant="crimson" block>Luk sag</Button>
             <Button variant="yellowish" block>Flyt til liste</Button>
           </div>
-
         </div>
       </div>
     </div>
@@ -55,7 +64,7 @@
 <script lang="ts">
 import Modal from "../../components/Modal.vue";
 import { ref } from "vue";
-import {format, formatDistanceToNow} from "date-fns";
+import { format, formatDistanceToNow } from "date-fns";
 import { dotLongStrings } from "../../utils/UtilitiesPack";
 import { da } from "date-fns/locale";
 import { Ticket } from "../../utils/Ticket";
@@ -63,14 +72,14 @@ import { Ticket } from "../../utils/Ticket";
 import { ticketStoreObservable } from "../../store/TicketStore";
 import TicketMessage from "./TicketMessage.vue";
 import TimelineItem from "./TimelineItem.vue";
-import faker from 'faker';
+import faker from "faker";
 import Button from "../../components/Button.vue";
 export default {
   name: "TicketModal",
   props: {
     ticket: Object,
   },
-  components: {Button, TimelineItem, TicketMessage, Modal },
+  components: { Button, TimelineItem, TicketMessage, Modal },
   setup(props: any) {
     const ticketStore = ticketStoreObservable();
     //const data: Ticket|null = ticketStore.value.activeTicket;
@@ -81,15 +90,16 @@ export default {
         locale: da,
       });
 
-    const dateFormat = (date: Date) => format(date, "d. MMM", {
-      locale: da,
-    });
+    const dateFormat = (date: Date) =>
+      format(date, "d. MMM", {
+        locale: da,
+      });
 
-    const random = (max: number) => Math.round(Math.random()*max+1);
-    const randomString = () => faker.lorem.words(Math.random()*3+1);
+    const random = (max: number) => Math.round(Math.random() * max + 1);
+    const randomString = () => faker.lorem.words(Math.random() * 3 + 1);
     const timelineColor = (): string => {
       const colors = ["tealish", "crimson", "yellowish", "indigo"];
-      return colors[Math.floor(Math.random()*colors.length)];
+      return colors[Math.floor(Math.random() * colors.length)];
     };
 
     const lowercaseString = (str: string) => str.toLowerCase();
@@ -103,7 +113,7 @@ export default {
       dotLongStrings,
       random,
       randomString,
-      timelineColor
+      timelineColor,
     };
   },
 };
